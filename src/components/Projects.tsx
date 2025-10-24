@@ -27,7 +27,7 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<(typeof PROJECTS)[0] | null>(null);
 
   return (
-    <div className='w-full md:pb-20'>
+    <div className='w-full pb-12 md:pb-20'>
       {/* Tabs */}
       <div className='flex flex-row justify-center gap-14 sm:gap-30'>
         {tabs.map((tab: { name: string; icon: ReactNode }, idx: number) => (
