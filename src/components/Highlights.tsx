@@ -54,7 +54,7 @@ const Highlights = () => {
   ];
 
   return (
-    <div className='mt-5 lg:mt-8 mb-5 pb-2 w-full px-5 md:px-0 lg:w-[90%] xl:w-[70%] flex flex-row flex-nowrap overflow-x-scroll thin-scrollbar'>
+    <div className='my-5 lg:my-8 pb-2 w-full px-5 md:px-0 lg:w-[90%] xl:w-[70%] flex flex-row flex-nowrap overflow-x-scroll thin-scrollbar'>
       {iconList.map((icon: { name: string; icon: ReactNode }, idx: number) => (
         <div key={idx} className='flex flex-col items-center mx-3 md:mx-5'>
           <div className='border-4 border-neutral-300 flex justify-center items-center w-16 h-16 md:w-20 md:h-20 rounded-full mb-0.5'>
