@@ -1,3 +1,4 @@
+import BottomNavbar from "./components/BottomNavbar";
 import Highlights from "./components/Highlights";
 import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
@@ -14,6 +15,7 @@ function App() {
           <Projects />
         </section>
       </main>
+      <BottomNavbar />
     </>
   );
 }
