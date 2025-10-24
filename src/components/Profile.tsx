@@ -1,5 +1,8 @@
 import { Download, UserPlus } from "lucide-react";
 import profileImg from "../assets/herms profile.png";
+import VerifiedIcon from "./icons/VerifiedIcon";
+
+import { PROFILE_DATA } from "../constants/data";
 
 const Profile = () => {
   return (
@@ -15,45 +18,41 @@ const Profile = () => {
 
         {/* Personal Details */}
         <div className='flex sm:block flex-col justify-center'>
-          <h1 className='text-2xl sm:text-3xl font-bold mb-2'>John Lawrence Hermo</h1>
-          <h2 className='hidden sm:block text-base font-semibold leading-tight'>
-            Fullstack Developer | Shopify Developer <br /> Front-end Developer | Back-end Developer
-          </h2>
+          <div className='mb-2 pt-2'>
+            <h1 className='text-2xl sm:text-3xl font-bold '>{PROFILE_DATA.name}</h1>
+            <h3 className='text-sm font-semibold flex items-center gap-1'>
+              {PROFILE_DATA.username}
+              <span className='pt-0.5'>
+                <VerifiedIcon size={14} />
+              </span>
+            </h3>
+          </div>
+          <h2 className='hidden sm:block text-base font-semibold leading-tight'>{PROFILE_DATA.title}</h2>
 
           <div className='flex flex-row justify-around xs:justify-baseline xs:gap-2 sm:gap-4 sm:mt-2 md:mt-4 mb-2'>
             <p className='text-sm'>
-              <span className='font-semibold'>174</span> posts
+              <span className='font-semibold'>{PROFILE_DATA.projectCount}</span> projects
             </p>
             <p className='text-sm'>
-              <span className='font-semibold'>112K</span> followers{" "}
+              <span className='font-semibold'>{PROFILE_DATA.connectionCount}</span> connections
             </p>
             <p className='text-sm'>
-              <span className='font-semibold'>834</span> following
+              <span className='font-semibold'>{PROFILE_DATA.passion}</span> passion
             </p>
           </div>
 
           <div className='hidden md:flex flex-col'>
-            <span className='text-sm'>
-              Test
-              <br />
-              listen: <a href='#'>test</a>
-            </span>
+            <span className='text-sm'>{PROFILE_DATA.bio}</span>
             <span className='text-sm'>Followed by aksdhkahsdjhsad + 9 more</span>
           </div>
         </div>
       </div>
 
       {/* Personal Details for mobile */}
-      <h2 className='font-semibold text-base mb-1 sm:hidden leading-tight'>
-        Fullstack Developer | Shopify Developer <br /> Front-end Developer | Back-end Developer
-      </h2>
+      <h2 className='font-semibold text-base mb-1 sm:hidden leading-tight'>{PROFILE_DATA.title}</h2>
       <div className='flex flex-col md:hidden mb-5'>
         <div className='leading-[4px]'>
-          <span className='text-sm'>
-            Test
-            <br />
-            listen: <a href='#'>test</a>
-          </span>
+          <span className='text-sm'>{PROFILE_DATA.bio}</span>
           <span className='text-sm'>Followed by aksdhkahsdjhsad + 9 more</span>
         </div>
       </div>
