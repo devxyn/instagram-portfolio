@@ -18,9 +18,9 @@ const Profile = () => {
 
         {/* Personal Details */}
         <div className='flex sm:block flex-col justify-center'>
-          <div className='mb-2 pt-2'>
+          <div className='mb-2 pt-2 text-center xs:text-left'>
             <h1 className='text-2xl sm:text-3xl font-bold '>{PROFILE_DATA.name}</h1>
-            <h3 className='text-sm font-semibold flex items-center gap-1'>
+            <h3 className='text-sm font-semibold flex justify-center xs:justify-start items-center gap-1'>
               {PROFILE_DATA.username}
               <span className='pt-0.5'>
                 <VerifiedIcon size={14} />
@@ -29,7 +29,7 @@ const Profile = () => {
           </div>
           <h2 className='hidden sm:block text-base font-semibold leading-tight'>{PROFILE_DATA.title}</h2>
 
-          <div className='flex flex-row justify-around xs:justify-baseline xs:gap-2 sm:gap-4 sm:mt-2 md:mt-4 mb-2'>
+          <div className='flex flex-row justify-center xs:justify-start gap-2 sm:gap-4 sm:mt-2 md:mt-4 mb-2'>
             <p className='text-sm'>
               <span className='font-semibold'>{PROFILE_DATA.projectCount}</span> projects
             </p>
