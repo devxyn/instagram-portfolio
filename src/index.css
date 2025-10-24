@@ -3,3 +3,37 @@
 @theme {
   --breakpoint-xs: 330px;
 }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .thin-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db #ffffff;
+  }
+  .thin-scrollbar::-webkit-scrollbar {
+    width: 0.5rem; /* w-2 */
+  }
+  .thin-scrollbar::-webkit-scrollbar-track {
+    background: #f3f4f6; /* bg-gray-100 */
+    border-radius: 9999px; /* rounded-full */
+  }
+  .thin-scrollbar::-webkit-scrollbar-thumb {
+    background: #d1d5db; /* bg-gray-300 */
+    border-radius: 9999px; /* rounded-full */
+  }
+  @media (prefers-color-scheme: dark) {
+    .thin-scrollbar::-webkit-scrollbar-track {
+      background: #3f3f46; /* bg-neutral-700 */
+    }
+    .thin-scrollbar::-webkit-scrollbar-thumb {
+      background: #737373; /* bg-neutral-500 */
+    }
+  }
+}
